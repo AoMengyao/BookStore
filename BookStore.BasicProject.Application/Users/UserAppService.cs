@@ -1,12 +1,16 @@
 ﻿using BookStore.BasicProject.Application.Contracts.Users;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Volo.Abp;
+using Volo.Abp.DependencyInjection;
 
 namespace BookStore.BasicProject.Application.Users
 {
+    [Dependency(ServiceLifetime.Transient)]
     public class UserAppService : IUserAppService
     {
         public async Task<UserDto> GetUserAsync(int id)

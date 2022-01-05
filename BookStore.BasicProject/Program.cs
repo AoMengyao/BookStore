@@ -21,6 +21,7 @@ namespace BookStore.BasicProject
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                }).UseAutofac();//ÓÃautofacÌæ»»
+
     }
 }
